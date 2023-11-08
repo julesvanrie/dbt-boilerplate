@@ -6,6 +6,9 @@ sources:
     tables:
       - name: sales
         identifier: raw_cc_sales
+        tests:
+          - unique:
+              column_name: "(product_id || '_' || date_date)"
       - name: stock
         identifier: raw_cc_stock
       - name: parcel
