@@ -10,3 +10,12 @@ sources:
         identifier: raw_cc_stock
       - name: parcel
         identifier: raw_cc_parcel
+        columns:
+          - name: Parcel_id
+            tests:
+              - unique
+          - name: Transporter
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['colissimo', 'ups']
