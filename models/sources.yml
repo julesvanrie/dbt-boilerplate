@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_data_circle
+    description: raw data, coming from BigQuery
+    tables:
+      - name: sales
+        identifier: raw_cc_sales
+        description: daily sales data per product_id
+        tests:
+          - unique:
+              column_name: "(product_id || '_' || date_date)"
+      - name: stock
+        identifier: raw_cc_stock
+        description: stock data per model, color and size
+        columns:
+          - name: model
+            description: model code
+          - name: color
+            description: two-digit color code
+      - name: parcel
+        identifier: raw_cc_parcel
+        columns:
+          - name: Parcel_id
+            tests:
+              - unique
+          - name: Transporter
+            description: full name of transporter
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['colissimo', 'ups']
