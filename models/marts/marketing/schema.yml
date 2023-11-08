@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: transactions_daily
+    description: daily transactions across all products
+    columns:
+      - name: date_date
+        description: date of sales
+        tests:
+          - unique
+      - name: turnover
+        description: turnover of the day across all products
+        tests:
+          - not_null
+      - name: items_count
+        description: number of items sold
+      - name: product_id_unique
+        description: number of different products sold
+  - name: transactions_monthly
+    description: monthly transactions across all products
+    columns:
+      - name: year_month
+        description: month of sales
+        tests:
+          - unique
+      - name: turnover
+        description: turnover of the month across all products
+        tests:
+          - not_null
+      - name: items_count
+        description: number of items sold
+      - name: product_id_unique
+        description: number of different products sold
+              
+
