@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 select
     year || '-' || format('%02d', month) as year_month
     ,sum(turnover) as turnover
