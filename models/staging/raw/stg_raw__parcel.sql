@@ -16,7 +16,7 @@ renamed as (
         date_purchase,
         date_shipping,
         date_delivery,
-        datecancelled
+        datecancelled as date_cancelled
 
     from source
 

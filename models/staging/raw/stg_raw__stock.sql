@@ -9,12 +9,13 @@ source as (
 renamed as (
 
     select
+        concat(model, '_', color, '_', size) as product_id,
         model,
         model_name,
         color,
         color_name,
         size,
-        new,
+        `new`,
         forecast_stock,
         stock,
         price
