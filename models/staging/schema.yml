@@ -8,3 +8,7 @@ models:
         tests:
           - not_null
           - unique
+      - name: color_name
+        description: color of the product in full
+        tests:
+          - no_color
