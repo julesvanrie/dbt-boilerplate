@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: int_stock_sales
+    description: combinded stock and sales
+    columns:
+      - name: product_id
+        description: the unique combination of model color size
+        tests:
+          - not_null
+      - name: date_date
+        description: date of sales
+        tests:
+          - not_null
+    tests:
+      - unique:
+          column_name: "(product_id || '-' || date_date)"
+  - name: int_sales_daily
+    description: daily aggregation of sales data over all products
+    columns:
+      - name: date_date
+        description: date of sales
+        tests:
+          - not_null
+          - unique
