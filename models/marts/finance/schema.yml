@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: revenues_daily
+    description: daily revenues across all products
+    columns:
+      - name: date_date
+        description: date of sales
+        tests:
+          - unique
+      - name: turnover
+        description: turnover of the day across all products
+        tests:
+          - not_null
+  - name: revenues_monthly
+    description: monthly revenues across all products
+    columns:
+      - name: year_month
+        description: month of sales
+        tests:
+          - unique
+      - name: turnover
+        description: turnover of the month across all products
+        tests:
+          - not_null
+              
+
