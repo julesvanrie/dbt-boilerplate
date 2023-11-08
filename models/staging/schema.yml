@@ -11,4 +11,5 @@ models:
       - name: color_name
         description: color of the product in full
         tests:
-          - no_color
+          - no_color:
+              color: Red
