@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_raw__stock
+    columns:
+      - name: product_id
+        description: unique combination of model color size
+        tests:
+          - not_null
+          - unique
