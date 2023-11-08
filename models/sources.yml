@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_data_circle
+    tables:
+      - name: sales
+        identifier: raw_cc_sales
+      - name: stock
+        identifier: raw_cc_stock
+      - name: parcel
+        identifier: raw_cc_parcel
